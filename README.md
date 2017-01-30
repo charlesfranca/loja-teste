@@ -1,1 +1,1 @@
-# loja-teste
+Abra este arqui e rode NPM install
