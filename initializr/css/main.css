@@ -1,0 +1,28 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+section.produtos {
+    height: 500px;
+}
+
+p.preco-por {
+    color: green;
+}
+
+p.preco-de {
+    text-decoration: line-through;
+}
+
+span.preco-de-reais {
+    font-size: 30px;
+    color: red;
+}
+
+.produto-imagem img {
+    width: 100px;
+}
+
+.produto-item.col-md-3 {
+    text-align: center;
+}
