@@ -3,7 +3,7 @@ $(document).ready(function() {
     // Função do Javascript que efetua uma requisição assincrona(não recarrega a página depois de executada e não trava a página)
     $.ajax({
         url: "http://localhost:3000/produtos", // Url do endpoint a ser executado
-        type: "get", // Methodo da requisição (post, put, delete)
+        type: "delete", // Methodo da requisição (post, put, delete)
         data: {}, // Parâmetros enviados na requisição
         success: function(produtos) { // Função que será executada se a requisição acontecer com sucesso.
             console.log(produtos);
