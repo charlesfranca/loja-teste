@@ -2,13 +2,39 @@ var express = require('express');
 var cors = require('cors')
 var app = express();
 
-require('express-swagger-ui')({
-    app: app,
-    swaggerUrl: '/swagger.json', // this is the default value
-    localPath: '/explorer' // this is the default value
-});
-
 app.use(cors())
+
+var livros = [{
+    "imagem": "file:///Users/charlesfranca/Documents/Free_Book_Store_Ecommerce_Template/home.html",
+    "titulo": "Livro 1",
+    "author": "Charles",
+    "descricao": "Meu primeiro livro de testes",
+    "valor": "22,90"
+}, {
+    "imagem": "file:///Users/charlesfranca/Documents/Free_Book_Store_Ecommerce_Template/home.html#",
+    "titulo": "Livro 2",
+    "author": "Charles",
+    "descricao": "Meu primeiro livro de testes",
+    "valor": "22,90"
+}, {
+    "imagem": "file:///Users/charlesfranca/Documents/Free_Book_Store_Ecommerce_Template/css/images/image03.jpg",
+    "titulo": "Livro 3",
+    "author": "Charles",
+    "descricao": "Meu primeiro livro de testes",
+    "valor": "22,90"
+}, {
+    "imagem": "file:///Users/charlesfranca/Documents/Free_Book_Store_Ecommerce_Template/css/images/image04.jpg",
+    "titulo": "Livro 4",
+    "author": "Charles",
+    "descricao": "Meu primeiro livro de testes",
+    "valor": "22,90"
+}, {
+    "imagem": "file:///Users/charlesfranca/Documents/Free_Book_Store_Ecommerce_Template/css/images/image05.jpg",
+    "titulo": "Livro 5",
+    "author": "Charles",
+    "descricao": "Meu primeiro livro de testes",
+    "valor": "22,90"
+}]
 
 var produtos = [{
         titulo: "Camera digital",
@@ -50,6 +76,12 @@ var produtos = [{
 app.get('/produtos', function(req, res) {
     res.send(
         produtos
+    );
+});
+
+app.get('/livros', function(req, res) {
+    res.send(
+        livros
     );
 });
 
